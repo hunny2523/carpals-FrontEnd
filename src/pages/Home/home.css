@@ -1,0 +1,321 @@
+button
+{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: #808080;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+#navbar
+{
+    background-color: rgb(253, 249, 189);
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    font-size: larger;
+    width: 100%;
+    position: fixed;
+    opacity: 95%;
+    z-index: 2;
+    box-shadow: 3px 3px 5px #d1d1d1;
+}
+#navbar ul
+{
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#navbar ul li
+{
+    list-style: none;
+    padding: 0 20px;
+    font-weight: bold;
+}
+#navbar ul li:hover
+{
+    color: rgb(129, 129, 129);
+}
+#navbar_form
+{
+    width: 35rem;
+    background-color: white;
+    border-radius: 20px;
+    padding: 7px;
+    margin-left: 15rem;
+}
+#navbar_form input
+{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 3px;
+}
+#navbar_form input::placeholder
+{
+    font-size: larger;
+    padding-left: 5px;
+}
+#navbar_form i
+{
+    float: right;
+    margin-right: 10px;
+}
+#loginOption
+{
+    float: right;
+    padding: 10px;
+    margin-left: 12rem;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(250, 207, 17);
+    border-radius: 20px;
+}
+#loginOption:hover
+{
+    background-color: rgb(255, 174, 0);
+}
+#mainbar
+{
+    position: relative;
+    margin: auto;
+    max-width: 1050px;
+    padding-top: 4rem;
+}
+.mainSlides
+{
+    display: none;
+
+}
+/* .mainSlides img
+{
+    opacity: 60%;
+} */
+#text1 
+{
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 8%;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow:2px 2px #808080;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #272727;
+}
+#text1 button
+{
+    background-color: rgb(247, 172, 9);
+    cursor: pointer;
+    border:1px black solid;
+}
+#text1 button:hover
+{
+    background-color: rgb(255, 208, 0);
+}
+#text2
+{
+    margin-top: 30%;
+    margin-left:50%;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow:2px 2px #808080;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #272727;
+}
+#text3
+{
+    margin-top: 35%;
+    margin-left:28%;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow:2px 2px #808080;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    /* margin-top: -22px; */
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    /* background-color: bisque; */
+  }
+  .next
+  {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+  }
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);}
+.fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+#secPart
+{
+    display: flex;
+    margin: auto;
+    /* background-color: #f1f88e; */
+    max-width: 1300px;
+}
+#secPart div
+{
+    margin:auto;
+    /* background-color: antiquewhite; */
+    width: 90%;
+}
+#secPart img
+{
+    width: 33%;
+}
+#secPart form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#secPart form div
+{
+    margin: 10px;
+    padding: 4px 8px 2px 8px;
+    /* border-radius: 10px; */
+    border: none;
+    width: 85%;
+    box-shadow: 2px 2px rgb(247, 99, 62);
+    background-color: #f4ffff;
+    /* border-bottom:1px solid black; */
+}
+#secPart form div input
+{
+    outline: none;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    width: 20rem;
+}
+#textSec
+{
+    font-size: large;
+    padding-bottom: 2rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#secPartBtn {
+    margin-top: 15px;
+    background-color: #f1f88e;
+    box-shadow: 2px 2px rgb(247, 99, 62);
+    padding: 10px 25px;
+}
+#secPartBtn:hover
+{
+    background-color: antiquewhite;
+}
+#basic-info-bar
+{
+    display: flex;
+    padding: 0.8% 10% 0.8% 10%;
+    /* background-color: #f3f2f2; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+#basic-info-bar div
+{
+    margin: 0.5% 1% 0.5% 1%;
+    padding: 3% 2.5% 3% 2.5%;
+    width: 33%;
+    /* background-color: #e7fdf7; */
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#basic-info-bar div i
+{
+    font-size: 300%;
+    color: #383838;
+}
+
+
+
+/* next section */
+
+#coverpic::before
+{
+    background: url("https://image.freepik.com/free-vector/human-hand-using-online-ordering-taxi-car-sharing-mobile-application-concept-transportation-carsharing-service-app-smartphone-screen-with-gps-map-modern-cityscape-background-horizontal_48369-25594.jpg") no-repeat center center/cover;
+    content: "";
+    background-attachment: fixed;
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+
+}
+#coverpic div
+{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 5% 15% 5% 15%;
+}
+
+
+
+footer
+{
+    padding-top: 1%;
+    background-color: #fcfcfc;
+}
+#inside-footer
+{
+    display: flex;
+    padding: 3% 10% 3% 10%;
+    font-size: larger;
+}
+#footer-text 
+{
+    text-align: justify;
+    padding: 0% 8% 0% 8%;
+    width: 33%;
+    border-right: 0.5px solid gray;
+}
+#quick-links
+{
+    padding: 0% 7% 0% 8%;
+    width: 33%;
+    border-right: 2px solid gray;
+}
+#contact
+{
+    font-size: 2rem;
+    padding: 0% 8% 0% 8%;
+    width: 33%;
+}
+#footer
+{
+    background-color: #272727;
+    color: white;
+    padding: 0.5%;
+}

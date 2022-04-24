@@ -1,0 +1,23 @@
+
+#footer-div
+{
+
+    background: url("../../../public/assets/footer-bg.jpg") no-repeat center center/cover;
+    box-shadow: 1px 2px 5px rgb(107, 107, 107);
+    width:98%;
+    margin: 0 auto ;
+    color: white;
+    font-weight: 400;
+    font-size:1.25em;
+    padding: 6%;
+}
+
+footer{
+    background: linear-gradient(to bottom ,white 60% ,rgb(255, 248, 146) 40%);
+    color: white;
+}
+
+footer .nav-link{
+    padding: 0;
+    
+}

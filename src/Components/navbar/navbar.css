@@ -1,0 +1,11 @@
+.navbar-color{
+    background-color: rgb(253, 249, 189);
+}
+.navbar-search{
+    width: 30rem;
+    border-radius: 20px;
+}
+.navbar-search-button{
+    margin-right: 10rem;
+    border-radius: 20px;
+}
