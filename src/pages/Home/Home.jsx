@@ -1,10 +1,18 @@
 import Carousel from '../../Components/carousel/Carousel'
 import Footer from '../../Components/footer/Footer'
+import { AuthContext } from "../../context/AuthContext";
 import Navbar from '../../Components/navbar/Navbar'
+import Request from '../RequestPagePassenger/Request';
+import DriverForm from '../../Components/DriverCreate/DriverForm'
 import './home.css'
+import { useEffect,useContext } from 'react';
 
 export default function Home() {
     
+    const { user } = useContext(AuthContext);
+    useEffect(()=>{
+        console.log(user.license)
+    },[])
     return (
         <div>
             <Navbar/>
@@ -15,22 +23,7 @@ export default function Home() {
                 <div>
                     <div id="textSec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatem recusandae ipsa
                         ape Lorem ipsum dolor sit amet. t. Accusantium, est?</div>
-                    <form action="#" id="userinfo">
-                        <div>
-                            <i className="fa fa-location-arrow" aria-hidden="true"></i>
-                            <input type="text" placeholder="Start destination" />
-
-                            <i className="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text" placeholder="End destination" />
-                        </div>
-                        <div><i className="fa fa-users" aria-hidden="true"></i><input type="number" placeholder="Passengers" />
-                            <i className="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="datetime-local" placeholder="Date/Time" />
-                        </div>
-                        <button id="secPartBtn">
-                            <i className="fa fa-search" aria-hidden="true"></i>Search
-                        </button>
-                    </form>
+                    {user.license?<DriverForm/>:<Request/>}
                 </div>
             </div>
             <section id="coverpic">

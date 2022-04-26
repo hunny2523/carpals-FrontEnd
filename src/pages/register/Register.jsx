@@ -17,9 +17,8 @@ export default function Register() {
       password: password.current.value,
       licenseNo:LicenseNo.current.value
     }
-
+console.log(user);
     try {
-      console.log(password.current.value+" "+Repeatpassword.current.value);
       if(password.current.value===Repeatpassword.current.value){
         await axios.post("http://localhost:5000/api/auth/UserRegister", user);
         history.push("/login");

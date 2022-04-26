@@ -1,8 +1,8 @@
 import { createContext, useEffect, useReducer } from "react";
 import AuthReducer from "./AuthReducer";
-
+const cookie = localStorage.getItem("user")
 const INITIAL_STATE = {
-  user:JSON.parse(localStorage.getItem("user")) || null,
+  user: cookie ? JSON.parse(cookie) : null,
   isFetching: false,
   error: false,
 };

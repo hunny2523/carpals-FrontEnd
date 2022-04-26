@@ -7,12 +7,12 @@ export default function Footer() {
             <footer className="footer">
                 <div id="footer-div" >
                     <div className="row">
-                        <div class="col-sm-2 py-4 offset-3 offset-sm-0 col-6">
+                        <div className="col-sm-2 py-4 offset-3 offset-sm-0 col-6">
                             <h1 className='display-5'>Carpals</h1>
                             <h5>Share Your Ride...!</h5>
                         </div>
 
-                        <div class="col-7 offset-1 col-sm-4">
+                        <div className="col-7 offset-1 col-sm-4">
                             <h5>About Us</h5>
                             <p>Lorem, ipsum dolor sit amet con neque reprehenderit quia ipsam eius, assumenda inventore vel nam adipisci id facere, voluptatum, saepe at ut error et!</p>
 
