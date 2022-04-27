@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Switch, Redirect, Route } from 'react-router-d
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import Request from "./pages/RequestPagePassenger/Request";
-import Model from "./Components/Model";
+import Modal from "./Components/Modal";
+import DriverInfo from "./pages/DriverInfo/DriverInfo";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -23,8 +24,10 @@ function App() {
           <Route exact path="/" element={<Home />}>
             {user ? <Home /> : <Register />}
           </Route>
+          <Route exact path="/userInfo" element={<DriverInfo/>}>
+            <DriverInfo/>
+          </Route>
           {/* <Request/> */}
-          {/* <Model/> */}
         </Switch>
       </Router>
     </div>

@@ -1,6 +1,7 @@
 import axios from "axios"
 import RequestList from "./RequestList"
 import { useState } from "react"
+import Modal from "../../Components/Modal"
 
 export default function Request() {
     
@@ -40,7 +41,7 @@ export default function Request() {
                     <option value="saab">surat</option>
             </select>
             <br/>
-            {(data!=="default")&&<RequestList request={data}/>}
+            {(data!=="default")&&<Modal request={data}/>}
         </div>
     )
 }

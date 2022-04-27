@@ -1,25 +1,14 @@
 import React, { useContext } from 'react'
-import { AuthContext } from '../../context/AuthContext';
+import { useHistory } from 'react-router-dom';
+
+import DriverInfo from '../DriverInfo/DriverInfo';
 
 const RequestListItem = ({ request }) => {
+  const history = useHistory();
 
-  const { user } = useContext(AuthContext)
 
   const handleClick = async () => {
-
-    const headers = {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${user.authToken}`
-    }
-
-    const res = await fetch(`http://localhost:5000/api/request/${request._id}/accept`, {
-      method: 'PUT',
-      headers
-    })
-
-    const data = await res.json()
-
-    console.log(data);  
+    history.push("/userInfo",{requestId:request._id});
   }
 
   return (
