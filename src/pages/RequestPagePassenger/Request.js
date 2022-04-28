@@ -23,7 +23,7 @@ export default function Request() {
             body: JSON.stringify(body)
         });
         const data = await response.json();
-        console.log(data);
+        
         setIsOpen(true);
         setdata(data);
     };
@@ -32,14 +32,15 @@ export default function Request() {
 
     return (
         <div className="container">
-            <label htmlFor="cars">Choose a City:</label>
-            <select name="cars" id="cars" defaultValue="none" onChange={handleSelect}>
-                <option value="none" disabled hidden>Select an Option</option>
+            <h3 className="text-primary fw-bolder">Select A City To Pick A Ride: </h3>
+            <label htmlFor="cars" className="mt-3 me-2 fw-bold ">Choose a City:</label>
+            <select name="cars" id="cars" className="px-3 py-1" defaultValue="none" onChange={handleSelect}>
+                <option value="none" disabled hidden>Select a City</option>
                 <option value="volvo">ahmedabad</option>
                 <option value="saab">vadodara</option>
                 <option value="saab">surat</option>
             </select>
             <br />
-            {(data !== "default") && <Modal isOpen={isOpen} requestClose={() => { setIsOpen(false); }} request={data} />}        </div>
+            {(data !== "default") && <Modal request={data} />}        </div>
     );
 }

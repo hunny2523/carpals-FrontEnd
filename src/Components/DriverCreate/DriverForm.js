@@ -31,21 +31,19 @@ export default function DriverForm() {
         const data=await res.json();
 
         if(res.status === 200){
-            alert('Data saved.')
+            alert('Request Succefully Created, We will inform you whenever any passenger accept your request');
         }
     }
 
 
     return (
         <div>
+            <h4 className="text-center">Enter Details of Ride</h4>
             <form action="#" id="userinfo" onSubmit={handleSubmit}>
                 <div>
-                    <i className="fa fa-location-arrow" aria-hidden="true"></i>
                     <input type="text" ref={start} placeholder="Start destination" />
-
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    <input type="text" ref={end} placeholder="end" />
-                    <input type="text" ref={passengers} placeholder="passenger" />
+                    <input type="text" ref={end} placeholder="End destination" />
+                    <input type="number" ref={passengers} placeholder="passenger" />
                     <input type="text" ref={Vehicletype} placeholder="vehicle type" />
                     <input type="text" ref={vehicleNo} placeholder="vehicle no" />
                 </div>
@@ -53,8 +51,8 @@ export default function DriverForm() {
                     <i className="fa fa-calendar" aria-hidden="true"></i>
                     <input type="datetime-local" placeholder="Date/Time" />
                 </div> */}
-                <button id="secPartBtn">
-                    <i className="fa fa-search" aria-hidden="true"></i>submit
+                <button className="btn" id="secPartBtn">
+                    Create Request
                 </button>
             </form>
         </div>

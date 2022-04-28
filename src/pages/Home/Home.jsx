@@ -10,9 +10,6 @@ import { useEffect,useContext } from 'react';
 export default function Home() {
     
     const { user } = useContext(AuthContext);
-    useEffect(()=>{
-        console.log(user.license)
-    },[])
     return (
         <div>
             <Navbar/>
@@ -21,21 +18,17 @@ export default function Home() {
                 <img src="https://media.istockphoto.com/vectors/yellow-taxi-order-or-share-flat-line-illustration-vector-id1141727347?k=6&m=1141727347&s=612x612&w=0&h=1XpV9MIlY79RsUbX92pY3VDYcE5Sf3IAbyzkxoKnvno="
                     alt="" />
                 <div>
-                    <div id="textSec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatem recusandae ipsa
-                        ape Lorem ipsum dolor sit amet. t. Accusantium, est?</div>
+                   
                     {user.license?<DriverForm/>:<Request/>}
                 </div>
             </div>
             <section id="coverpic">
-                <div>
+                <div className='m-5'>
                     <h1>Carpool Services!</h1>
-                    Carpool helps you to find a ride partner or a ride to reach your destination. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Tempore consequatur, laboriosam assumenda eaque unde quaerat non, odio at
-                    natus commodi quibusdam nostrum cum. Minima aut beatae aperiam placeat excepturi accusantium ad esse
-                    voluptates architecto a?
+                    Carpools can help you to find your favourite group to share your ride.a bett utilisation of your vehicle, money and time with the trusted network to share a ride with an addition of unique gender friendly feature.
                 </div>
             </section>
-            <section id="basic-info-bar">
+            <section id="basic-info-bar" className='pt-5'>
                 <div id="info1"><i className="fa fa-credit-card-alt" aria-hidden="true"></i>&ensp; <h4>Let's Save money</h4>
                     <br />
                     <span>Choose your ride with lowest prices with Share & Save quality of carplas...! </span>
@@ -51,7 +44,6 @@ export default function Home() {
                     </span>
                 </div>
             </section>
-           
             
             <Footer/>
         </div>

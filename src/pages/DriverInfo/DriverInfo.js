@@ -1,6 +1,7 @@
 import React,{useContext,useEffect,useState} from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useLocation } from 'react-router-dom';
+import Navbar from '../../Components/navbar/Navbar';
 
 export default function DriverInfo() {
     useEffect(()=>{
@@ -23,19 +24,22 @@ export default function DriverInfo() {
             headers
         })
         const data = await res.json()
-        console.log(data);
         setdata(data);
     }
 
     return (
         <div>
-            <div className="card">
+            <Navbar/>
+        <div className='container mt-5 justify-content-center d-flex'>
+            <div className="card w-75">
+                <div className="card-header fw-bold">Driver Information: </div>
                 <div className="card-body">
-                    This is some text within a card body.
-                    <h1>the phone number is : {data.driver}</h1>
-                    {console.log(data)}
+                    <p>Driver Name: <b>{data.Name}</b> </p>
+                    <p>Contact number: <b>{data.contact}</b> </p>
+                    {/* {console.log(data)} */}
                 </div>
             </div>
+        </div>
         </div>
     )
 }
