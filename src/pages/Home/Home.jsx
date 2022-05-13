@@ -14,14 +14,14 @@ export default function Home() {
         <div>
             <Navbar/>
             <Carousel/>
-            <div id="secPart">
+            {/* <div id="secPart">
                 <img src="https://media.istockphoto.com/vectors/yellow-taxi-order-or-share-flat-line-illustration-vector-id1141727347?k=6&m=1141727347&s=612x612&w=0&h=1XpV9MIlY79RsUbX92pY3VDYcE5Sf3IAbyzkxoKnvno="
                     alt="" />
                 <div>
                    
                     {user.license?<DriverForm/>:<Request/>}
                 </div>
-            </div>
+            </div> */}
             <section id="coverpic">
                 <div className='m-5'>
                     <h1>Carpool Services!</h1>

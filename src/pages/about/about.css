@@ -1,0 +1,16 @@
+#aboutPage::before{
+    background: url("https://imageio.forbes.com/specials-images/dam/imageserve/1161159565/0x0.jpg?format=jpg&width=1200") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -1;
+    filter:contrast(50%);
+}
+
+#aboutPage{
+    box-shadow: 0 5px 30px rgb(33, 33, 33);
+    color: rgb(255, 255, 237);
+}

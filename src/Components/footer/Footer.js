@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 
@@ -14,16 +15,16 @@ export default function Footer() {
 
                         <div className="col-7 offset-1 col-sm-4">
                             <h5>About Us</h5>
-                            <p>Lorem, ipsum dolor sit amet con neque reprehenderit quia ipsam eius, assumenda inventore vel nam adipisci id facere, voluptatum, saepe at ut error et!</p>
+                            <p>Carpools can help you to find your favourite group to share your ride.a bett utilisation of your vehicle, money and time </p>
 
                         </div>
                         <div className="col-4 col-sm-2 offset-sm-1 border-start border-light ps-5 ">
                             <h5>Links</h5>
                             <ul className="list-unstyled">
-                                <li><a className='nav-link text-light' href="#">Home</a></li>
-                                <li><a className='nav-link text-light' href="#">About</a></li>
-                                <li><a className='nav-link text-light' href="#">Menu</a></li>
-                                <li><a className='nav-link text-light' href="#">Contact</a></li>
+                                <li><Link className='nav-link text-light' to="/">Home</Link></li>
+                                <li><Link className='nav-link text-light' to="/about">About</Link></li>
+                                <li><Link className='nav-link text-light' to="/">Help</Link></li>
+                                <li><Link className='nav-link text-light' to="/">Contact</Link></li>
                             </ul>
                         </div>
 

@@ -9,7 +9,7 @@ export default function Navbar() {
     }
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-color navbar-light shadow rounded">
+            <nav className="navbar navbar-expand-lg navbar-color navbar-light ">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Carpals
                     </Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="#">About Us</Link>
+                                <Link className="nav-link" to="/about">About Us</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/">Help</Link>

@@ -1,6 +1,6 @@
 .login-bg ::before {
     content: "";
-    background: linear-gradient(to bottom right, rgb(255, 200, 200), rgb(218, 255, 254)) no-repeat center center/cover;
+    background: url("https://images.unsplash.com/photo-1543269865-0a740d43b90c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center/cover;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -8,10 +8,16 @@
     left: 0;
     z-index: -1;
     opacity: 0.1;
-    filter: contrast(80%);
+    filter: brightness(40%);
 }
 
+#login-div{
+    box-shadow: 0 5px 30px rgb(33, 33, 33);
+}
 
-.form-control{
-    border: 1px solid black;
+.login-input{
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(173, 173, 173);
+    border-radius: 0%;
 }

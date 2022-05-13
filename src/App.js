@@ -7,6 +7,7 @@ import { AuthContext } from "./context/AuthContext";
 import Request from "./pages/RequestPagePassenger/Request";
 import Modal from "./Components/Modal";
 import DriverInfo from "./pages/DriverInfo/DriverInfo";
+import About from "./pages/about/About";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/userInfo" element={<DriverInfo/>}>
             <DriverInfo/>
+          </Route>
+          <Route exact path="/about" element={<About/>}>
+            <About/>
           </Route>
           {/* <Request/> */}
         </Switch>
