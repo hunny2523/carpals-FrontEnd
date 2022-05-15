@@ -15,14 +15,14 @@ export default function Register() {
       name: name.current.value,
       contactNo: contact.current.value,
       password: password.current.value,
-      licenseNo:LicenseNo.current.value
+      licenseNo: LicenseNo.current.value
     }
     try {
-      if(password.current.value===Repeatpassword.current.value){
+      if (password.current.value === Repeatpassword.current.value) {
         await axios.post("http://localhost:5000/api/auth/UserRegister", user);
         history.push("/login");
       }
-      else{
+      else {
         alert("wrong password");
       }
     } catch (error) {
@@ -43,19 +43,33 @@ export default function Register() {
   return (
     <div className='container text-light register-bg mt-md-5 pt-md-5'>
       <div className="row">
-        
+
         <div id="register-div" className="col-12 offset-md-1 col-md-5">
           <h2 className="my-3">Register Now</h2>
           <form onSubmit={handleClick}>
             <div className="form-group m-1">
               <label htmlFor='number'>Enter your Name</label>
-              <span  className="fa fa-lg fa-user text-light"></span>
+              <span className="fa fa-lg fa-user text-light"></span>
               <input ref={name} className="form-control register-input" type="text" required name="name" id="name" placeholder="Enter Your Name" />
             </div>
             <div className="form-group m-1">
               <label htmlFor='number'>Contact No.</label>
               <i className="fa fa-user"></i>
               <input ref={contact} className="form-control register-input" type="text" required name="number" id="number" placeholder="Enter Contact No." />
+            </div>
+            <div className="form-group m-1 d-flex ">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check ms-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Female
+                </label>
+              </div>
             </div>
             <div className="row mt-1">
               <div className="form-group col-md-6 col-12">

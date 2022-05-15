@@ -18,7 +18,7 @@
     filter: brightness(40%);
 }
 #home-page{
-    height: 63vh;
+    height: 70vh;
 }
 .home-page-welcome-heading{
     margin-top: 20%;
@@ -26,4 +26,8 @@
 
 .animation-text{
     color: rgb(255, 219, 90);
+}
+#carpals-font{
+    font-family: 'Comic Neue', cursive;
+    font-style: italic;
 }

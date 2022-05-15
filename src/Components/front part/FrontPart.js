@@ -70,17 +70,18 @@ export default function FrontPart() {
             <div className='container'>
 
                 <h1 className='text-light text-center home-page-welcome-heading' >
-                    Welcome To Carpals !
+                    Welcome To <span id="carpals-font">Carpals !
+                        </span> 
                 </h1>
 
                 <TypeAnimation className="animation-text mt-3 text-center"
                     cursor={true}
                     sequence={[
-                        'Gender Friendly',
-                        2000,
                         'Save Money',
                         2000,
-                        'People Together',
+                        'Gender Friendly',
+                        2000,
+                        'Save Time',
                         2000,
                     ]}
                     wrapper="h2"
