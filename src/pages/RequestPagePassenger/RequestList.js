@@ -13,19 +13,22 @@ const RequestListItem = ({ request }) => {
   }
 
   return (
-    <div className="card m-4" style={{"width":"710px"}}>
+    <div className='container'>
+
+    <div className="card my-4 mx-auto" style={{"width":"710px"}}>
       <div className="card-header">
         <h5 className="card-title">{format(request.date)}</h5>
       </div>
       <div className="card-body">
      
-        <p className="card-text">Start  : <b>{request.start}</b> </p>
-        <p className="card-text">End Destination: <b> {request.end}</b> </p>
-        <p className="card-text">passenger required : <b> {request.passengers} </b></p>
-        <p className="card-text">vehicle type : <b> {request.Vehicletype}</b></p>
+        <p className="card-text">Start: <b>{request.start[0].toUpperCase() + request.start.substring(1)}</b> </p>
+        <p className="card-text">End Destination: <b> {request.end[0].toUpperCase() + request.end.substring(1)}</b> </p>
+        <p className="card-text">Passenger Required: <b> {request.passengers} </b></p>
+        <p className="card-text">Vehicle Type: <b> {request.Vehicletype[0].toUpperCase() + request.Vehicletype.substring(1)}</b></p>
         <button className='btn btn-danger' onClick={handleClick}>Accept</button>
       </div>
     </div >
+    </div>
   )
 
 }

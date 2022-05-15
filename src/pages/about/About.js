@@ -7,7 +7,7 @@ export default function About() {
             <Navbar />
             <div  className="container  px-2 pb-2" id="aboutPage">
 
-                <h1 className="my-5 text-center ">About Us </h1>
+                <h1 className="my-4 text-center ">About Us </h1>
                 <p>
 
                     Carpools is based on travel network  to share a ride.carpools  leverages technology is to fill empty seats on the road, connecting members looking to carpool or to travel by bus, and making travel more affordable, sociable and convenient. Carpools’ environmentally and human-friendly mobility network saves time & money  and enables more and more human connections every day.

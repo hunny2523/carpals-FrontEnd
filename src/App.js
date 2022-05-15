@@ -23,7 +23,7 @@ function App() {
             {user ? <Redirect to="/" /> : <Register />}
           </Route >
           <Route exact path="/" element={<Home />}>
-            {user ? <Home /> : <Register />}
+            {user ? <Home /> : <Login />}
           </Route>
           <Route exact path="/userInfo" element={<DriverInfo/>}>
             <DriverInfo/>
@@ -31,7 +31,9 @@ function App() {
           <Route exact path="/about" element={<About/>}>
             <About/>
           </Route>
-          {/* <Request/> */}
+          <Route exact path="/findRide" element={<Request/>}>
+          <Request/>
+          </Route>
         </Switch>
       </Router>
     </div>

@@ -1,15 +1,17 @@
 import './navbar.css'
-import { useHistory,Redirect,Link } from 'react-router-dom';
+import { useHistory,Redirect,Link,useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     const history=useHistory();
+    const location=useLocation();
+
     const handleLogOut=()=>{
-        history.push("/register");
-        localStorage.removeItem("user");
+        history.push("/login");
+        // localStorage.removeItem("user");
     }
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-color navbar-light ">
+            <nav className="navbar fixed-top navbar-expand-lg navbar-color navbar-light ">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Carpals
                     </Link>
@@ -19,13 +21,13 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                <Link className={`nav-link ${location.pathname==="/"?"active":""}`} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about">About Us</Link>
+                                <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About Us</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Help</Link>
+                                <Link className={`nav-link ${location.pathname==="/findRide"?"active":""}`} to="/findRide">Find A Ride</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/">Contact Us</Link>

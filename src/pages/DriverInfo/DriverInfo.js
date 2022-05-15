@@ -31,7 +31,7 @@ export default function DriverInfo() {
         <div>
             <Navbar/>
         <div className='container mt-5 justify-content-center d-flex'>
-            <div className="card w-75">
+            <div className="card mt-5 w-75">
                 <div className="card-header fw-bold">Driver Information: </div>
                 <div className="card-body">
                     <p>Driver Name: <b>{data.Name}</b> </p>

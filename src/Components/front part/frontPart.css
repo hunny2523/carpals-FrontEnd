@@ -18,8 +18,12 @@
     filter: brightness(40%);
 }
 #home-page{
-    height: 55vh;
+    height: 63vh;
 }
 .home-page-welcome-heading{
     margin-top: 20%;
+}
+
+.animation-text{
+    color: rgb(255, 219, 90);
 }
