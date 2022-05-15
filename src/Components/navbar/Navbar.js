@@ -1,13 +1,14 @@
 import './navbar.css'
-import { useHistory,Redirect,Link,useLocation } from 'react-router-dom';
+import { useHistory,Link,useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     const history=useHistory();
     const location=useLocation();
 
     const handleLogOut=()=>{
+        localStorage.removeItem("user");
         history.push("/login");
-        // localStorage.removeItem("user");
+        window.location.reload();
     }
     return (
         <div>

@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Redirect, Route } from 'react-router-d
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import Request from "./pages/RequestPagePassenger/Request";
-import Modal from "./Components/Modal";
 import DriverInfo from "./pages/DriverInfo/DriverInfo";
 import About from "./pages/about/About";
 
@@ -15,7 +14,6 @@ function App() {
     <div >
       <Router>
         <Switch>
-          {/* <Home/> */}
           <Route exact path="/login" element={<Login />}>
             {user ? <Redirect to="/" /> : <Login />}
           </Route>

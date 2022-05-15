@@ -14,13 +14,11 @@ const RequestListItem = ({ request }) => {
 
   return (
     <div className='container'>
-
     <div className="card my-4 mx-auto" style={{"width":"710px"}}>
       <div className="card-header">
         <h5 className="card-title">{format(request.date)}</h5>
       </div>
       <div className="card-body">
-     
         <p className="card-text">Start: <b>{request.start[0].toUpperCase() + request.start.substring(1)}</b> </p>
         <p className="card-text">End Destination: <b> {request.end[0].toUpperCase() + request.end.substring(1)}</b> </p>
         <p className="card-text">Passenger Required: <b> {request.passengers} </b></p>
@@ -30,7 +28,6 @@ const RequestListItem = ({ request }) => {
     </div >
     </div>
   )
-
 }
 
 export default function RequestList(props) {

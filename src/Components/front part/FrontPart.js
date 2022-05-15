@@ -1,56 +1,46 @@
 import './frontPart.css'
-import { useContext, useState,useEffect } from 'react';
+import { useContext, useState } from 'react';
 import TypeAnimation from 'react-type-animation';
 import { AuthContext } from "../../context/AuthContext";
 import DriverForm from '../DriverCreate/DriverForm';
-import Request from '../../pages/RequestPagePassenger/Request';
-import { Button,Modal,ModalBody,ModalHeader,ModalFooter,Form,FormGroup,Input } from 'reactstrap';
+import { Button, Modal, ModalBody, ModalHeader, ModalFooter, Form, FormGroup, Input } from 'reactstrap';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function FrontPart() {
-    
-    
-    
+
     const { user } = useContext(AuthContext);
-    console.log("user");
-    console.log(user)
-    //    const [driver, setDriver] = useState(false)
-    // const handleShareRide=()=>{
-        //     if(user.license){
-            //         setDriver(true);
-            
-            //     }
-            // }
-            const history = useHistory();
-            const handleChooseRide = () => {
-                history.push("./findRide")
-            }
-            
-            let license = "";
-            const handleSubmit = async (e) => {
-                e.preventDefault();
-                const body = {
-                    license: license?.value,
-                }
-                console.log(body)
-                const headers = {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${user.authToken}`
-                }
-                const res = await fetch("http://localhost:5000/api/auth/UserLicence", {
-                    method: "POST",
-                    headers,
+
+    const history = useHistory();
+    const handleChooseRide = () => {
+        history.push("./findRide")
+    }
+
+    let license = "";
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const body = {
+            license: license?.value,
+        }
+        // console.log(body)
+        const headers = {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${user.authToken}`
+        }
+        const res = await fetch("http://localhost:5000/api/auth/UserLicence", {
+            method: "POST",
+            headers,
             body: JSON.stringify(body)
         })
         const data = await res.json();
         console.log(data);
-        var x = localStorage.getItem("user");
-        console.log(localStorage.user)
-        const user1={}
-        user1.authToken=user.authToken;
-        user1.license=true;
-        console.log(user1)
-        localStorage.setItem("user",JSON.stringify(user1));
+
+        const user1 = {}
+        user1.authToken = user1.authToken;
+        user1.license = data.license;
+
+        localStorage.setItem("user", JSON.stringify(user1));
+
         if (res.status === 200) {
             alert('Added License Number SuccessFully , Now you can Share Your Ride with Others');
         }
@@ -64,14 +54,14 @@ export default function FrontPart() {
     const handleToggle = () => {
         setopen(!open);
     }
-    
+
     return (
         <div id="home-page">
             <div className='container'>
 
                 <h1 className='text-light text-center home-page-welcome-heading' >
                     Welcome To <span id="carpals-font">Carpals !
-                        </span> 
+                    </span>
                 </h1>
 
                 <TypeAnimation className="animation-text mt-3 text-center"
@@ -88,32 +78,30 @@ export default function FrontPart() {
                     repeat={Infinity}
                 />
                 <div className='mt-4 d-flex justify-content-center'>
-                    {user.license ? <DriverForm /> : 
-                    <div>
-                        <Button className='btn btn-outline-light' onClick={handleToggle}>Share a Ride</Button>
-                        <Modal isOpen={open} toggle={handleToggle} >
-                    <ModalHeader toggle={handleToggle}>Enter License No.</ModalHeader>
-                    <ModalBody>
-                        <Form action="#" id="userinfo" onSubmit={handleSubmit}>
-                            <FormGroup>
-                                <Input type="text" name="license" placeholder="Enter License Number"
-                                    innerRef={(input) => license = input} />
-                            </FormGroup>
-                            <Button color="danger">
-                                Add No
-                            </Button>
-                        </Form>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button color="secondary" onClick={handleToggle}>Cancel</Button>
-                    </ModalFooter>
-                </Modal>
-                    </div>}
+                    {user.license ? <DriverForm /> :
+                        <div>
+                            <Button className='btn btn-outline-light' onClick={handleToggle}>Share a Ride</Button>
+                            <Modal isOpen={open} toggle={handleToggle} >
+                                <ModalHeader toggle={handleToggle}>Enter License No.</ModalHeader>
+                                <ModalBody>
+                                    <Form action="#" id="userinfo" onSubmit={handleSubmit}>
+                                        <FormGroup>
+                                            <Input type="text" name="license" placeholder="Enter License Number"
+                                                innerRef={(input) => license = input} />
+                                        </FormGroup>
+                                        <Button color="danger">
+                                            Add No
+                                        </Button>
+                                    </Form>
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button color="secondary" onClick={handleToggle}>Cancel</Button>
+                                </ModalFooter>
+                            </Modal>
+                        </div>}
                     <Button color="danger" onClick={handleChooseRide} className='ms-4'>Choose A Ride</Button>
                 </div>
             </div>
-            {/* {driver &&  <DriverForm/>} */}
-
         </div>
     )
 }

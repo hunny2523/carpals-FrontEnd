@@ -12,9 +12,9 @@ export default function DriverInfo() {
     const location = useLocation();
     const request = location.state.requestId;
 
-    const [data, setdata] = useState("loding")
-    const fetchNumber=async ()=>{
+    const [data, setdata] = useState("loding");
 
+    const fetchNumber=async ()=>{
         const headers = {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${user.authToken}`
@@ -36,7 +36,6 @@ export default function DriverInfo() {
                 <div className="card-body">
                     <p>Driver Name: <b>{data.Name}</b> </p>
                     <p>Contact number: <b>{data.contact}</b> </p>
-                    {/* {console.log(data)} */}
                 </div>
             </div>
         </div>

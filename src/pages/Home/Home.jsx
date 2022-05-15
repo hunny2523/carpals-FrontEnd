@@ -43,7 +43,7 @@ export default function Home() {
                     </span>
                 </div>
             </section>
-            <div  className='row'>
+            <div  className='row mx-1'>
                 <div className='col-md-6  img-fluid col-12'>
                     <img src="https://media.istockphoto.com/vectors/yellow-taxi-order-or-share-flat-line-illustration-vector-id1141727347?k=6&m=1141727347&s=612x612&w=0&h=1XpV9MIlY79RsUbX92pY3VDYcE5Sf3IAbyzkxoKnvno="
                         alt="" />
