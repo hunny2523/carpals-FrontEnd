@@ -55,9 +55,9 @@ export default function Profile() {
         });
         const requests = await response.json();
         console.log("req")
-        console.log(requests)
+      
         setRequest(requests);
-        console.log(request)
+        
     };
     return (
         <div>

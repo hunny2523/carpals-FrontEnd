@@ -1,4 +1,4 @@
-import Carousel from '../../Components/front part/FrontPart'
+
 import Footer from '../../Components/footer/Footer'
 import { AuthContext } from "../../context/AuthContext";
 import Navbar from '../../Components/navbar/Navbar'
