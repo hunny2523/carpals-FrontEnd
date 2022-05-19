@@ -31,7 +31,7 @@ export default function Navbar() {
                                 <Link className={`nav-link ${location.pathname==="/findRide"?"active":""}`} to="/findRide">Find A Ride</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Contact Us</Link>
+                                <Link className="nav-link" to="/profile">Profile</Link>
                             </li>
                         </ul>
                         <form className="d-flex">

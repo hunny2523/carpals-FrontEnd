@@ -3,7 +3,7 @@ import Navbar from "../../Components/navbar/Navbar";
 import RequestList from "./RequestList";
 
 export default function Request() {
-    
+
     const handleSelect = (e) => {
         const targetCity = e.target.options[e.target.selectedIndex].text;
         handleRequest(targetCity);
@@ -37,7 +37,6 @@ export default function Request() {
     return (
         <div>
             <Navbar />
-            <div className=" p-5"></div>
             <div className="container ">
                 <h3 className="text-secondary text-center  fw-bolder">Select A City To Pick A Ride: </h3>
                 <label htmlFor="cars" className="mt-3 me-2 fw-bold " style={{"marginLeft":"18%"}}>Choose a City:</label>

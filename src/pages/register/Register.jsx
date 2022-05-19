@@ -90,7 +90,7 @@ export default function Register() {
             <div className="form-group m-1">
               <label htmlFor='Enter License Number'>License No.</label>
               <i className="fa fa-key"></i>
-              <input disabled={License} ref={LicenseNo} className="form-control" type="text" required name="Enter License Number" id="Enter License Number" placeholder="Enter Password Again" />
+              <input disabled={License} ref={LicenseNo} className="form-control" type="text" required name="Enter License Number" id="Enter License Number" placeholder="Enter License Number" />
             </div>
             <button className="btn m-1 w-50 mt-3 btn-danger"> Register</button>
           </form>

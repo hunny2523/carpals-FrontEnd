@@ -7,6 +7,7 @@ import { AuthContext } from "./context/AuthContext";
 import Request from "./pages/RequestPagePassenger/Request";
 import DriverInfo from "./pages/DriverInfo/DriverInfo";
 import About from "./pages/about/About";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path="/findRide" element={<Request/>}>
           <Request/>
+          </Route>
+          <Route exact path="/profile" element={<Profile/>}>
+          <Profile/>
           </Route>
         </Switch>
       </Router>
