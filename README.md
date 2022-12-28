@@ -1,70 +1,13 @@
-# Getting Started with Create React App
+# Carpals- Share Your Ride
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Carpools is based on travel network  to share a ride.carpools  leverages technology is to fill empty seats on the road, connecting members looking to carpool or to travel by bus, and making travel more affordable, sociable and convenient. Carpools’ environmentally and human-friendly mobility network saves time & money  and enables more and more human connections every day.
+              
+#### We, the  CARPALS-share your ride, our main goal is to provide faster and easier way to people to find out rides and riders. We have seen many times that most of the time, it is difficult to find the ride, cab/taxi. Other hand side, people have no any problems to share the ride. But to connect this both kind of people is difficult.
+ So, this website/application will help to do that.
+               
+ #### “CARPALS” is here to serve you in terms of saving money, time and better utilization of vehicle and also in a favor of  environment. It gives the information, which help us to find ride/share ride. All those who wants to find a car/taxi  can add their  starting  and ending  location point  with the proper time  and after that, they can see the list of riders. Even they can sortlist the gender ,which is our special feature. This is how, Travelers can wisely send the request to the riders and also feel gender friendly while sending the request.
+                
+  #### On the other side, riders who wants to share the rides, they also need to add the starting/ending location as well as the time.They can also sort-list the people according to gender to whom they want to share their rides.  After that, they can see the list of travelers and accept the request as per their comfertness.
+                
+ #### This is how, both, riders and travellers, can make a connection with each other through the carparls to  share the ride and enjoy the ride safely with verified people. It can save time,money. It can also reduce the traffic and reduce pollution. Thus, it is a environment friendly.
+                
