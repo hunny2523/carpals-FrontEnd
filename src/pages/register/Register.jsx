@@ -1,8 +1,12 @@
 import "./register.css"
-import { useRef, useState } from 'react'
+import { useRef, useState, useContext } from 'react'
 import axios from "axios";
+import { AuthContext } from "../../context/AuthContext";
 import { useHistory } from 'react-router-dom'
 export default function Register() {
+
+  const { dispatch } = useContext(AuthContext);
+
   const password = useRef();
   const contact = useRef();
   const name = useRef();
@@ -17,10 +21,14 @@ export default function Register() {
       password: password.current.value,
       licenseNo: LicenseNo.current.value
     }
+
+
     try {
       if (password.current.value === Repeatpassword.current.value) {
-        await axios.post("http://localhost:5000/api/auth/UserRegister", user);
-        history.push("/login");
+        const user1 = await axios.post("http://localhost:5000/api/auth/UserRegister", user);
+        console.log(user1);
+        dispatch({ type: "LOGIN_SUCCESS", payload: user1.data });
+        history.push("/");
       }
       else {
         alert("wrong password");
@@ -29,7 +37,6 @@ export default function Register() {
       console.log(error);
     }
   };
-
 
   const handleLogin = () => {
     history.push("/login");

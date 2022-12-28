@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className='container mt-md-5 text-light pt-md-5 login-bg'>
       <div className="row justify-content-center">
-        
+
         <div id="login-div" className="col-12 mt-5 p-3 col-md-5">
           <h2 className='my-4'>Sign In</h2>
           <form onSubmit={handleClick}>

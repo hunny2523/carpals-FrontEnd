@@ -8,6 +8,12 @@ const RequestListItem = ({ request }) => {
 
     return (
         <div className='container'>
+
+
+        <div id="profile">
+            {/* <img id="profile-image" className='img-fluid' src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="profile-image" /> */}
+            
+        </div>
             <div className="card my-4 mx-auto" style={{ "width": "710px" }}>
                 <div className="card-header">
                     <h5 className="card-title">{format(request.date)}</h5>
@@ -20,7 +26,6 @@ const RequestListItem = ({ request }) => {
                     <p className='card-text'>Passengers: <b> {
                         request.followers.map(follower=>{
                            return  (<span>{follower}<br></br></span>
-                               
                                )
                         })
                         }
